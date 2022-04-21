@@ -3,4 +3,4 @@ Simple terminal chess game that I made to practice C++ classes, encapsulation, a
 
 I used Emacs to build the game files and a linux terminal to run the program.
 
-Most Documentation was removed for the time being aside from header information, I will aim to reapply in time.
+Most documentation was removed for the time being aside from header information, I will aim to reapply in time.
