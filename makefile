@@ -177,8 +177,8 @@ knight.o: $(KNIGHTSOURCE) $(KNIGHTHEADER)
 ################################
 
 ###### game.o File Creation ######
-game.o: game.cpp
-	g++ $(CPPFLAGS) $(GTFLAGS) $(GCOVFLAGS) -c game.cpp
+game.o: $(MAINSOURCE)
+	g++ $(CPPFLAGS) $(GTFLAGS) $(GCOVFLAGS) -c $(MAINSOURCE)
 
 ###### ioutil.o File Creation ######
 ioutil.o: ioutil.cpp
