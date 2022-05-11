@@ -1,5 +1,5 @@
 ##############################
-###### EXECUTABLE NAMES ######
+#	EXECUTABLE NAMES     #
 ##############################
 
 BOARDSOURCE = board.cpp
@@ -32,7 +32,7 @@ MAIN = game
 
 
 ###################################
-###### TEST EXECUTABLE NAMES ######
+#      TEST EXECUTABLE NAMES      #
 ###################################
 
 TESTPAWN = testPawn
@@ -44,21 +44,21 @@ TESTKNIGHT = testKnight
 
 
 #####################
-###### MODULES ######
+#      MODULES      #
 #####################
 
 PROGMODULES = board.o piece.o king.o queen.o rook.o bishop.o knight.o pawn.o game.o ioutil.o
 
 
 #############################
-###### REMOVE COMMANDS ######
+#      REMOVE COMMANDS      #
 #############################
 
 RM = /bin/rm -f *.o $(MAIN) *~  *.*~ *.g*
 
 
 ###################
-###### FLAGS ######
+#      FLAGS      #
 ###################
 
 CPPFLAGS = -ansi -pedantic-errors -Wall -Wconversion
@@ -68,7 +68,7 @@ VALGRIND = valgrind --tool=memcheck --leak-check=full
 
 
 #######################################
-###### EXECUTABLE FILE COMMANDS  ######
+#      EXECUTABLE FILE COMMANDS       #
 #######################################
 
 ###### Main Program ######
@@ -115,7 +115,7 @@ $(TESTKNIGHT): $(TESTKNIGHTMODULES)
 
 
 #############################
-###### CLEAN DIRECTORY ######
+#      CLEAN DIRECTORY      #
 #############################
 
 ###### Clean Files ######
@@ -124,7 +124,7 @@ clean:
 
 
 ##########################################
-###### PRIMARY OBJECT FILE CREATION ######
+#      PRIMARY OBJECT FILE CREATION      #
 ##########################################
 
 ###### board.o File Creation ######
@@ -137,7 +137,7 @@ piece.o: $(PIECESOURCE) $(PIECEHEADER)
 
 
 ######################################
-###### CHESS PIECE OBJECT FILES ######
+#      CHESS PIECE OBJECT FILES      #
 ######################################
 
 ###### pawn.o File Creation ######
@@ -166,7 +166,7 @@ knight.o: $(KNIGHTSOURCE) $(KNIGHTHEADER)
 
 
 ################################
-###### OTHER OBJECT FILES ######
+#      OTHER OBJECT FILES      #
 ################################
 
 ###### game.o File Creation ######
