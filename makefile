@@ -140,7 +140,6 @@ piece.o: $(PIECESOURCE) $(PIECEHEADER)
 ###### CHESS PIECE OBJECT FILES ######
 ######################################
 
-##################################
 ###### pawn.o File Creation ######
 pawn.o: $(PAWNSOURCE) $(PAWNHEADER)
 	g++ $(CPPFLAGS) $(GTFLAGS) $(GCOVFLAGS) -c $(PAWNSOURCE)
