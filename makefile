@@ -71,49 +71,42 @@ VALGRIND = valgrind --tool=memcheck --leak-check=full
 ###### EXECUTABLE FILE COMMANDS  ######
 #######################################
 
-##########################
 ###### Main Program ######
 $(MAIN): $(PROGMODULES)
 	g++ $(CPPFLAGS) $(GCOVFLAGS) $(PROGMODULES) -o $(MAIN)
 #	$(VALGRIND) $(MAIN)
 	gcov $(MAINSOURCE) 2> /dev/null | grep -A 1 $(MAINSOURCE)
 
-##################################
 ###### Testing Pawn Program ######
 $(TESTPAWN): $(TESTPAWNMODULES)
 	g++ $(GCOVFLAGS) $(GTFLAGS) $(TESTPAWNMODULES) -o $(TESTPAWN)
 	$(TESTPAWN)
 	gcov $(PAWNSOURCE) 2> /dev/null | grep -A 1 $(PAWNSOURCE)
 
-##################################
 ###### Testing King Program ######
 $(TESTKING): $(TESTKINGMODULES)
 	g++ $(GCOVFLAGS) $(GTFLAGS) $(TESTKINGMODULES) -o $(TESTKING)
 	$(TESTKING)
 	gcov $(KINGSOURCE) 2> /dev/null | grep -A 1 $(KINGSOURCE)
 
-###################################
 ###### Testing Queen Program ######
 $(TESTQUEEN): $(TESTQUEENMODULES)
 	g++ $(GCOVFLAGS) $(GTFLAGS) $(TESTQUEENMODULES) -o $(TESTQUEEN)
 	$(TESTQUEEN)
 	gcov $(QUEENSOURCE) 2> /dev/null | grep -A 1 $(QUEENSOURCE)
 
-##################################
 ###### Testing Rook Program ######
 $(TESTROOK): $(TESTROOKMODULES)
 	g++ $(GCOVFLAGS) $(GTFLAGS) $(TESTROOKMODULES) -o $(TESTROOK)
 	$(TESTROOK)
 	gcov $(ROOKSOURCE) 2> /dev/null | grep -A 1 $(ROOKSOURCE)
 
-####################################
 ###### Testing Bishop Program ######
 $(TESTBISHOP): $(TESTBISHOPMODULES)
 	g++ $(GCOVFLAGS) $(GTFLAGS) $(TESTBISHOPMODULES) -o $(TESTBISHOP)
 	$(TESTBISHOP)
 	gcov $(BISHOPSOURCE) 2> /dev/null | grep -A 1 $(BISHOPSOURCE)
 
-####################################
 ###### Testing Knight Program ######
 $(TESTKNIGHT): $(TESTKNIGHTMODULES)
 	g++ $(GCOVFLAGS) $(GTFLAGS) $(TESTKNIGHTMODULES) -o $(TESTKNIGHT)
@@ -147,6 +140,7 @@ piece.o: $(PIECESOURCE) $(PIECEHEADER)
 ###### CHESS PIECE OBJECT FILES ######
 ######################################
 
+##################################
 ###### pawn.o File Creation ######
 pawn.o: $(PAWNSOURCE) $(PAWNHEADER)
 	g++ $(CPPFLAGS) $(GTFLAGS) $(GCOVFLAGS) -c $(PAWNSOURCE)
