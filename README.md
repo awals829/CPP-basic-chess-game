@@ -7,7 +7,7 @@ Most documentation was removed for the time being aside from header information.
 
 To run the program, download the files and enter 'make game' in the terminal in the directory the files are located. 
 
-To remove all object and extra files from the directory, type 'make clean'.
+To remove all object and extra files from the directory - type 'make clean'.
 
 
 ![](https://c.tenor.com/zePQJUG3FHoAAAAC/arrested-development-im-a-scholar.gif)
